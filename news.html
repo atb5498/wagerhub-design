@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WagerHub</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css">
+
+    <style>
+        body {
+            font-family: "Roboto", sans-serif;
+            background-color: #E1E5EE;
+        }
+
+        .accordion-button::after {
+            background-image: none;
+        }
+
+        .accordion-button:not(.collapsed)::after {
+            background-image: none;
+        }
+
+        .list-group-item {
+            border-color: #c7ccdb;
+        }
+
+        /* .accordion-button:not(.collapsed) {
+            color: #4077FF;
+        }
+
+        .accordion-item:last-of-type .accordion-button.collapsed {
+            border-radius: 0;
+        } */
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-dark bg-dark" style="background-color: #2A324B !important;">
+        <div class="container">
+            <a class="navbar-brand" href="#"><img src="wagerhub-logo.png" style="width: 30px"> WagerHub</a>
+        </div>
+    </nav>
+
+    <div class="offcanvas offcanvas-end show" tabindex="-1" id="offcanvas" aria-labelledby="offcanvasLabel"
+        data-bs-backdrop="true" data-bs-scroll="true" style="width: 80%; background-color: #E1E5EE;">
+        <div class="offcanvas-header">
+            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div class="offcanvas-body" style="background-color: white; box-shadow: 5px 5px 10px #C7CCDB;">
+                        <h2 id="offcanvasLabel">Article Header</h2>
+                        <h3 style="font-size: 1rem; color: #4077FF;">Article Source</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam earum sequi
+                            illo vitae temporibus enim, quod iusto reiciendis omnis distinctio assumenda id
+                            sit perferendis similique laudantium ab modi ex impedit...
+                        </p>
+                        <div class="row"
+                            style="color: #9FA4B6; text-align: center; margin-top: 8px; font-size: .75rem;">
+                            <div class="col">
+                                Author Name
+                            </div>
+                            <div class="col">
+                                03/24/2021
+                            </div>
+                        </div>
+                        <button type="button" class="btn btn-primary"
+                            style="background-color: #4077FF; border: 2px solid #4077FF; width: 100%; margin-top: 1rem;">READ
+                            FULL
+                            ARTICLE</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <!-- <div class="container">
+        <div class="row">
+            <div class="col">
+                <nav class="navbar navbar-light bg-light" style="background-color: transparent !important;">
+                    <div class="container-fluid" style="padding: 0;">
+                        <button style="padding: .25rem .75rem; background-color: transparent; border: none;">
+                            <h1 style="font-size: calc(1.325rem + .9vw); color: #212529; margin-top: 8px;">Live
+                                Newsfeed
+                            </h1>
+                        </button>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </div> -->
+
+    <!-- <div class="container" style="font-size: .75rem; margin-top: 25px;">
+        <div class="row">
+            <div class="col">
+                <div class="accordion accordion-flush" id="accordionFlushExample"
+                    style="box-shadow: 5px 5px 10px #C7CCDB; margin-bottom: 100px;">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingOne">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#flush-collapseOne" aria-expanded="false"
+                                aria-controls="flush-collapseOne">
+                                Article Heading One
+                                <br />
+                                Article Source
+                            </button>
+                        </h2>
+                        <div id="flush-collapseOne" class="accordion-collapse collapse"
+                            aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                                Laboriosam, quod laborum dolore nulla mollitia expedita animi error est? Asperiores
+                                vitae cupiditate eligendi laudantium alias pariatur enim animi quis reiciendis
+                                laborum... <a style="color: #4077FF; text-decoration: underline;">READ FULL ARTICLE</a>
+                                <div class="container" style="color: #767B91; text-align: center; margin-top: 8px;">
+                                    <div class="row">
+                                        <div class="col">
+                                            Author Name
+                                        </div>
+                                        <div class="col">
+                                            03/24/2021
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingTwo">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#flush-collapseTwo" aria-expanded="false"
+                                aria-controls="flush-collapseTwo">
+                                Article Heading Two
+                            </button>
+                        </h2>
+                        <div id="flush-collapseTwo" class="accordion-collapse collapse"
+                            aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                                Laboriosam, quod laborum dolore nulla mollitia expedita animi error est? Asperiores
+                                vitae cupiditate eligendi laudantium alias pariatur enim animi quis reiciendis
+                                laborum... <a style="color: #4077FF; text-decoration: underline;">READ FULL ARTICLE</a>
+                                <div class="container" style="color: #767B91; text-align: center; margin-top: 8px;">
+                                    <div class="row">
+                                        <div class="col">
+                                            Author Name
+                                        </div>
+                                        <div class="col">
+                                            03/24/2021
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingThree">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#flush-collapseThree" aria-expanded="false"
+                                aria-controls="flush-collapseThree">
+                                Article Heading Three
+                            </button>
+                        </h2>
+                        <div id="flush-collapseThree" class="accordion-collapse collapse"
+                            aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                                Laboriosam, quod laborum dolore nulla mollitia expedita animi error est? Asperiores
+                                vitae cupiditate eligendi laudantium alias pariatur enim animi quis reiciendis
+                                laborum... <a style="color: #4077FF; text-decoration: underline;">READ FULL ARTICLE</a>
+                                <div class="container" style="color: #767B91; text-align: center; margin-top: 8px;">
+                                    <div class="row">
+                                        <div class="col">
+                                            Author Name
+                                        </div>
+                                        <div class="col">
+                                            03/24/2021
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingFour">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#flush-collapseFour" aria-expanded="false"
+                                aria-controls="flush-collapseFour">
+                                Article Heading Four
+                            </button>
+                        </h2>
+                        <div id="flush-collapseFour" class="accordion-collapse collapse"
+                            aria-labelledby="flush-headingFour" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                                Laboriosam, quod laborum dolore nulla mollitia expedita animi error est? Asperiores
+                                vitae cupiditate eligendi laudantium alias pariatur enim animi quis reiciendis
+                                laborum... <a style="color: #4077FF; text-decoration: underline;">READ FULL ARTICLE</a>
+                                <div class="container" style="color: #767B91; text-align: center; margin-top: 8px;">
+                                    <div class="row">
+                                        <div class="col">
+                                            Author Name
+                                        </div>
+                                        <div class="col">
+                                            03/24/2021
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingFive">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#flush-collapseFive" aria-expanded="false"
+                                aria-controls="flush-collapseFive">
+                                Article Heading Five
+                            </button>
+                        </h2>
+                        <div id="flush-collapseFive" class="accordion-collapse collapse"
+                            aria-labelledby="flush-headingFive" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                                Laboriosam, quod laborum dolore nulla mollitia expedita animi error est? Asperiores
+                                vitae cupiditate eligendi laudantium alias pariatur enim animi quis reiciendis
+                                laborum... <a style="color: #4077FF; text-decoration: underline;">READ FULL ARTICLE</a>
+                                <div class="container" style="color: #767B91; text-align: center; margin-top: 8px;">
+                                    <div class="row">
+                                        <div class="col">
+                                            Author Name
+                                        </div>
+                                        <div class="col">
+                                            03/24/2021
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingSix">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#flush-collapseSix" aria-expanded="false"
+                                aria-controls="flush-collapseSix">
+                                Article Heading Six
+                            </button>
+                        </h2>
+                        <div id="flush-collapseSix" class="accordion-collapse collapse"
+                            aria-labelledby="flush-headingSix" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                                Laboriosam, quod laborum dolore nulla mollitia expedita animi error est? Asperiores
+                                vitae cupiditate eligendi laudantium alias pariatur enim animi quis reiciendis
+                                laborum... <a style="color: #4077FF; text-decoration: underline;">READ FULL ARTICLE</a>
+                                <div class="container" style="color: #767B91; text-align: center; margin-top: 8px;">
+                                    <div class="row">
+                                        <div class="col">
+                                            Author Name
+                                        </div>
+                                        <div class="col">
+                                            03/24/2021
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingSeven">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#flush-collapseSeven" aria-expanded="false"
+                                aria-controls="flush-collapseSeven">
+                                Article Heading Seven
+                            </button>
+                        </h2>
+                        <div id="flush-collapseSeven" class="accordion-collapse collapse"
+                            aria-labelledby="flush-headingSeven" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                                Laboriosam, quod laborum dolore nulla mollitia expedita animi error est? Asperiores
+                                vitae cupiditate eligendi laudantium alias pariatur enim animi quis reiciendis
+                                laborum... <a style="color: #4077FF; text-decoration: underline;">READ FULL ARTICLE</a>
+                                <div class="container" style="color: #767B91; text-align: center; margin-top: 8px;">
+                                    <div class="row">
+                                        <div class="col">
+                                            Author Name
+                                        </div>
+                                        <div class="col">
+                                            03/24/2021
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingEight">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#flush-collapseEight" aria-expanded="false"
+                                aria-controls="flush-collapseEight">
+                                Article Heading Eight
+                            </button>
+                        </h2>
+                        <div id="flush-collapseEight" class="accordion-collapse collapse"
+                            aria-labelledby="flush-headingEight" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                                Laboriosam, quod laborum dolore nulla mollitia expedita animi error est? Asperiores
+                                vitae cupiditate eligendi laudantium alias pariatur enim animi quis reiciendis
+                                laborum... <a style="color: #4077FF; text-decoration: underline;">READ FULL ARTICLE</a>
+                                <div class="container" style="color: #767B91; text-align: center; margin-top: 8px;">
+                                    <div class="row">
+                                        <div class="col">
+                                            Author Name
+                                        </div>
+                                        <div class="col">
+                                            03/24/2021
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingNine">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#flush-collapseNine" aria-expanded="false"
+                                aria-controls="flush-collapseNine">
+                                Article Heading Nine
+                            </button>
+                        </h2>
+                        <div id="flush-collapseNine" class="accordion-collapse collapse"
+                            aria-labelledby="flush-headingNine" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                                Laboriosam, quod laborum dolore nulla mollitia expedita animi error est? Asperiores
+                                vitae cupiditate eligendi laudantium alias pariatur enim animi quis reiciendis
+                                laborum... <a style="color: #4077FF; text-decoration: underline;">READ FULL ARTICLE</a>
+                                <div class="container" style="color: #767B91; text-align: center; margin-top: 8px;">
+                                    <div class="row">
+                                        <div class="col">
+                                            Author Name
+                                        </div>
+                                        <div class="col">
+                                            03/24/2021
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingTen">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#flush-collapseTen" aria-expanded="false"
+                                aria-controls="flush-collapseTen">
+                                Article Heading Ten
+                            </button>
+                        </h2>
+                        <div id="flush-collapseTen" class="accordion-collapse collapse"
+                            aria-labelledby="flush-headingTen" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                                Laboriosam, quod laborum dolore nulla mollitia expedita animi error est? Asperiores
+                                vitae cupiditate eligendi laudantium alias pariatur enim animi quis reiciendis
+                                laborum... <a style="color: #4077FF; text-decoration: underline;">READ FULL ARTICLE</a>
+                                <div class="container" style="color: #767B91; text-align: center; margin-top: 8px;">
+                                    <div class="row">
+                                        <div class="col">
+                                            Author Name
+                                        </div>
+                                        <div class="col">
+                                            03/24/2021
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> -->
+
+    <div class="container" style="margin-top: 25px;">
+        <div class="accordion accordion-flush" id="accordionFlushExample">
+            <div class="accordion-item">
+                <div class="accordion-header" id="flush-headingOne">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne"
+                        style="padding: 1rem; font-size: 1.25rem; color: white; background-color: #4077FF; border-radius: 0;">
+                        Newsfeed Filters<i class="fas fa-caret-down" style="padding-left: .5rem;"></i>
+                    </button>
+                </div>
+                <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne"
+                    data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                            <label class="form-check-label" for="flexCheckDefault">
+                                Filter One
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+                            <label class="form-check-label" for="flexCheckChecked">
+                                Filter Two
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col">
+                <div class="list-group list-group-flush"
+                    style="box-shadow: 5px 5px 10px #C7CCDB; margin-bottom: 100px;">
+                    <a href="#" class="list-group-item list-group-item-action">
+                        <div class="row">
+                            <div class="col-10">
+                                <h1 style="font-size: 1rem;">Article Heading</h1>
+                                <div style="color: #4077FF; font-size: .75rem; float: left;">Article Source</div>
+                                <div style="color: #9FA4B6; font-size: .75rem; float: right;">Just now</div>
+                            </div>
+                            <div class="col-2">
+                                <i class="fas fa-chevron-right" style="font-size: 1.25rem; line-height: 2.25;"></i>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#" class="list-group-item list-group-item-action">
+                        <div class="row">
+                            <div class="col-10">
+                                <h1 style="font-size: 1rem;">Article Heading</h1>
+                                <div style="color: #4077FF; font-size: .75rem; float: left;">Article Source</div>
+                                <div style="color: #9FA4B6; font-size: .75rem; float: right;">2 minutes ago</div>
+                            </div>
+                            <div class="col-2">
+                                <i class="fas fa-chevron-right" style="font-size: 1.25rem; line-height: 2.25;"></i>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#" class="list-group-item list-group-item-action">
+                        <div class="row">
+                            <div class="col-10">
+                                <h1 style="font-size: 1rem;">Article Heading</h1>
+                                <div style="color: #4077FF; font-size: .75rem; float: left;">Article Source</div>
+                                <div style="color: #9FA4B6; font-size: .75rem; float: right;">5 minutes ago</div>
+                            </div>
+                            <div class="col-2">
+                                <i class="fas fa-chevron-right" style="font-size: 1.25rem; line-height: 2.25;"></i>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#" class="list-group-item list-group-item-action">
+                        <div class="row">
+                            <div class="col-10">
+                                <h1 style="font-size: 1rem;">Article Heading</h1>
+                                <div style="color: #4077FF; font-size: .75rem; float: left;">Article Source</div>
+                                <div style="color: #9FA4B6; font-size: .75rem; float: right;">30 minutes ago</div>
+                            </div>
+                            <div class="col-2">
+                                <i class="fas fa-chevron-right" style="font-size: 1.25rem; line-height: 2.25;"></i>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#" class="list-group-item list-group-item-action">
+                        <div class="row">
+                            <div class="col-10">
+                                <h1 style="font-size: 1rem;">Article Heading</h1>
+                                <div style="color: #4077FF; font-size: .75rem; float: left;">Article Source</div>
+                                <div style="color: #9FA4B6; font-size: .75rem; float: right;">1 hour ago</div>
+                            </div>
+                            <div class="col-2">
+                                <i class="fas fa-chevron-right" style="font-size: 1.25rem; line-height: 2.25;"></i>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#" class="list-group-item list-group-item-action">
+                        <div class="row">
+                            <div class="col-10">
+                                <h1 style="font-size: 1rem;">Article Heading</h1>
+                                <div style="color: #4077FF; font-size: .75rem; float: left;">Article Source</div>
+                                <div style="color: #9FA4B6; font-size: .75rem; float: right;">2 hours ago</div>
+                            </div>
+                            <div class="col-2">
+                                <i class="fas fa-chevron-right" style="font-size: 1.25rem; line-height: 2.25;"></i>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#" class="list-group-item list-group-item-action">
+                        <div class="row">
+                            <div class="col-10">
+                                <h1 style="font-size: 1rem;">Article Heading</h1>
+                                <div style="color: #4077FF; font-size: .75rem; float: left;">Article Source</div>
+                                <div style="color: #9FA4B6; font-size: .75rem; float: right;">2 hours ago</div>
+                            </div>
+                            <div class="col-2">
+                                <i class="fas fa-chevron-right" style="font-size: 1.25rem; line-height: 2.25;"></i>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#" class="list-group-item list-group-item-action">
+                        <div class="row">
+                            <div class="col-10">
+                                <h1 style="font-size: 1rem;">Article Heading</h1>
+                                <div style="color: #4077FF; font-size: .75rem; float: left;">Article Source</div>
+                                <div style="color: #9FA4B6; font-size: .75rem; float: right;">2 hours ago</div>
+                            </div>
+                            <div class="col-2">
+                                <i class="fas fa-chevron-right" style="font-size: 1.25rem; line-height: 2.25;"></i>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#" class="list-group-item list-group-item-action">
+                        <div class="row">
+                            <div class="col-10">
+                                <h1 style="font-size: 1rem;">Article Heading</h1>
+                                <div style="color: #4077FF; font-size: .75rem; float: left;">Article Source</div>
+                                <div style="color: #9FA4B6; font-size: .75rem; float: right;">3 hours ago</div>
+                            </div>
+                            <div class="col-2">
+                                <i class="fas fa-chevron-right" style="font-size: 1.25rem; line-height: 2.25;"></i>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer
+        style="position: fixed; width: 100%; left: 0; bottom: 0; background-color: #767B91; text-align: center; padding: 1rem 0 .75rem 0;">
+        <div class="container" style="height: 100%;">
+            <div class="row" style="height: 100%;">
+                <div class="col" style="border-right: 1px solid #9FA4B6; width: 25%; padding: 0;">
+                    <!-- <i class="fas fa-home" style="font-size: 1.5rem; color: white;"></i> -->
+                    <div class="btn-group dropup">
+                        <div type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown"
+                            aria-expanded="false"
+                            style="background-color: transparent; font-size: .75rem; padding: 0; border: none; color: #9FA4B6;">
+                            <i class="fas fa-home"
+                                style="font-size: 1.5rem; color: #9FA4B6; display: block; margin-bottom: 4px;"></i>
+                            NFL
+                        </div>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Soccer</a></li>
+                            <li><a class="dropdown-item" href="#">Basketball</a></li>
+                            <li><a class="dropdown-item" href="#">Hockey</a></li>
+                            <li><a class="dropdown-item" href="#">Golf</a></li>
+                            <li><a class="dropdown-item" href="#">Combat Sports</a></li>
+                            <li><a class="dropdown-item" href="#">Baseball</a></li>
+                            <li><a class="dropdown-item" href="#">E-Sports</a></li>
+                        </ul>
+                    </div>
+                    <!-- <div style="color: white; font-size: .75rem;">HOME</div> -->
+                </div>
+                <div class="col" style="border-right: 1px solid #9FA4B6; width: 25%; padding: 0;">
+                    <i class="fas fa-newspaper" style="font-size: 1.5rem; color: white;"></i>
+                    <div style="color: white; font-size: .75rem;">NEWS</div>
+                </div>
+                <div class="col" style="border-right: 1px solid #9FA4B6; width: 25%; padding: 0;">
+                    <i class="fas fa-chart-area" style="font-size: 1.5rem; color: #9FA4B6;"></i>
+                    <div style="color: #9FA4B6; font-size: .75rem;">TRACKER</div>
+                </div>
+                <div class="col" style="width: 25%; padding: 0;">
+                    <i class="fas fa-user" style="font-size: 1.5rem; color: #9FA4B6;"></i>
+                    <div style="color: #9FA4B6; font-size: .75rem;">ACCOUNT</div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

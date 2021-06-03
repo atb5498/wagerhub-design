@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WagerHub</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css">
+
+    <style>
+        body {
+            font-family: "Roboto", sans-serif;
+            background-color: #E1E5EE;
+        }
+
+        .navbar-light .navbar-toggler {
+            color: rgb(13 110 253 / 25%);
+        }
+
+        .navbar-light .navbar-toggler:focus {
+            background-color: #e7f1ff;
+        }
+
+        .dropdown-item:active {
+            background-color: #4077FF;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-dark bg-dark" style="background-color: #2A324B !important;">
+        <div class="container">
+            <a class="navbar-brand" href="#"><img src="wagerhub-logo.png" style="width: 30px"> WagerHub</a>
+        </div>
+    </nav>
+    <!-- <nav class="navbar navbar-expand-lg navbar-dark bg-dark"
+        style="background-color: #2A324B !important; margin-bottom: 25px;">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#"><img src="wagerhub-logo.png" style="width: 30px"> WagerHub</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="#">Home</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav> -->
+
+    <!-- <div class="container">
+        <div class="row">
+            <div class="col">
+                <nav class="navbar navbar-light bg-light" style="background-color: transparent !important;">
+                    <div class="container-fluid" style="padding: 0;">
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false"
+                            aria-label="Toggle navigation" style="border: none; margin-bottom: 5px;">
+                            <h1 style="font-size: calc(1.325rem + .9vw); color: #212529; margin-top: 8px;">
+                                All Sports <i class="fas fa-caret-down"></i>
+                            </h1>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarScroll"
+                            style="background-color: white; margin-bottom: 15px;">
+                            <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll"
+                                style="--bs-scroll-height: 200px; padding: 0 25px;">
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown"
+                                        role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        Soccer
+                                    </a>
+                                    <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+                                        <li style="border-bottom: 1px solid rgba(0,0,0,.15);"><a class="dropdown-item"
+                                                href="#">Soccer 1</a></li>
+                                        <li><a class="dropdown-item" href="#">Soccer 2</a></li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown"
+                                        role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        Football
+                                    </a>
+                                    <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+                                        <li style="border-bottom: 1px solid rgba(0,0,0,.15);"><a class="dropdown-item"
+                                                href="#">Football 1</a></li>
+                                        <li><a class="dropdown-item" href="#">Football 2</a></li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown"
+                                        role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        Basketball
+                                    </a>
+                                    <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+                                        <li style="border-bottom: 1px solid rgba(0,0,0,.15);"><a class="dropdown-item"
+                                                href="#">NBA</a></li>
+                                        <li style="border-bottom: 1px solid rgba(0,0,0,.15);"><a class="dropdown-item"
+                                                href="#">NCAA</a></li>
+                                        <li><a class="dropdown-item" href="#">Euroleague</a></li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown"
+                                        role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        Hockey
+                                    </a>
+                                    <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+                                        <li style="border-bottom: 1px solid rgba(0,0,0,.15);"><a class="dropdown-item"
+                                                href="#">Hockey 1</a></li>
+                                        <li><a class="dropdown-item" href="#">Hockey 2</a></li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown"
+                                        role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        Golf
+                                    </a>
+                                    <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+                                        <li style="border-bottom: 1px solid rgba(0,0,0,.15);"><a class="dropdown-item"
+                                                href="#">Golf 1</a></li>
+                                        <li><a class="dropdown-item" href="#">Golf 2</a></li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown"
+                                        role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        Combat Sports
+                                    </a>
+                                    <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+                                        <li style="border-bottom: 1px solid rgba(0,0,0,.15);"><a class="dropdown-item"
+                                                href="#">Combat Sports 1</a></li>
+                                        <li><a class="dropdown-item" href="#">Combat Sports 2</a></li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown"
+                                        role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        Baseball
+                                    </a>
+                                    <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+                                        <li style="border-bottom: 1px solid rgba(0,0,0,.15);"><a class="dropdown-item"
+                                                href="#">Baseball 1</a></li>
+                                        <li><a class="dropdown-item" href="#">Baseball 2</a></li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown"
+                                        role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        E-Sports
+                                    </a>
+                                    <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+                                        <li style="border-bottom: 1px solid rgba(0,0,0,.15);"><a class="dropdown-item"
+                                                href="#">E-Sports 1</a></li>
+                                        <li><a class="dropdown-item" href="#">E-Sports 2</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li class="nav-item"><a class="nav-link" href="#">All Sports</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </div> -->
+
+    <div class="container" style="text-align: center; margin: 25px 0;">
+        <div class="row">
+            <div class="col-4">
+                <div style="color: #767B91; border-bottom: 5px solid #767B91;">03/23/2021</div>
+            </div>
+            <div class="col-4">
+                <div style="color: #4077FF; border-bottom: 5px solid #4077FF;">03/24/2021</div>
+            </div>
+            <div class="col-4">
+                <div style="color: #767B91; border-bottom: 5px solid #767B91;">03/25/2021</div>
+            </div>
+        </div>
+    </div>
+
+    <ul class="nav nav-tabs justify-content-center">
+        <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#"
+                style="color: #4077FF; font-size: 14px; padding: .5rem;">All
+                Games</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#" style="color: #767B91; font-size: 14px; padding: .5rem;">Active
+                Wagers</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#" style="color: #767B91; font-size: 14px; padding: .5rem;">Favorited
+                Games</a>
+        </li>
+    </ul>
+
+    <div class="offcanvas offcanvas-end show" tabindex="-1" id="offcanvas" aria-labelledby="offcanvasLabel"
+        data-bs-backdrop="true" data-bs-scroll="true" style="width: 100%; background-color: #E1E5EE;">
+        <div class="offcanvas-header">
+            <h1 class="offcanvas-title" id="offcanvasLabel">NFL</h1>
+            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div class="container" style="text-align: center; margin-bottom: 25px; padding: 0 2.5rem;">
+                        <div class="row">
+                            <div class="col">
+                                <div style="color: #4077FF; border-bottom: 5px solid #4077FF;">
+                                    03/24/2021</div>
+                            </div>
+                        </div>
+                    </div>
+                    <ul class="nav nav-tabs justify-content-center">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#"
+                                style="color: #4077FF; font-size: 14px;">Spread</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" style="color: #767B91; font-size: 14px;">Moneyline</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" style="color: #767B91; font-size: 14px;">Totals</a>
+                        </li>
+                    </ul>
+                    <div class="offcanvas-body" style="background-color: white; box-shadow: 5px 5px 10px #C7CCDB;">
+                        <h2 style="text-align: center; margin: 0;"><i class="fas fa-football-ball"></i> ATL vs. PHI <i
+                                class="fas fa-football-ball"></i></h2>
+                        <div class="container">
+                            <div class="row">
+                                <div class="col">
+                                    <nav class="navbar navbar-light bg-light"
+                                        style="background-color: transparent !important;">
+                                        <div class="container-fluid" style="padding: 0;">
+                                            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                                                data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false"
+                                                aria-label="Toggle navigation"
+                                                style="border: none; width: 100%; height: 40px;">
+                                                <div style="color: #4077FF;">
+                                                    Pinnacle: +2-110 <i class="fas fa-caret-down"></i>
+                                                </div>
+                                            </button>
+                                            <div class="collapse navbar-collapse" id="navbar">
+                                                <ul class="navbar-nav me-auto my-2 my-lg-0">
+                                                    <li class="nav-item" style="border-bottom: 1px solid #C7CCDB;"><a
+                                                            class="nav-link" href="#">Pinnacle:
+                                                            +2-110</a>
+                                                    </li>
+                                                    <li class="nav-item" style="border-bottom: 1px solid #C7CCDB;"><a
+                                                            class="nav-link" href="#">Bookmaker:
+                                                            +2-120</a>
+                                                    </li>
+                                                    <li class="nav-item"><a class="nav-link" href="#">Betonline:
+                                                            +2-130</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </nav>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col" style="text-align: right;">
+                                    <div style="border-bottom: 1px solid #c7ccdb; padding: 8px 0;">
+                                        Risk:
+                                    </div>
+                                    <div style="padding: 8px 0;">
+                                        Payout:
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <input type="text" class="form-control" aria-label="Risk Amount" placeholder="$"
+                                        style="border: 2px solid #4077FF;">
+                                    <!-- <div class="input-group mb-3" style="border: 2px solid #4077FF;">
+                                        <span class="input-group-text"
+                                            style="border: none; padding-right: 0; background-color: transparent;">$</span>
+                                        <input type="text" class="form-control"
+                                            aria-label="Risk Amount (to the nearest dollar)" style="border: none;">
+                                    </div> -->
+                                    <div style="padding: 8px 5px; color: #4077FF;">
+                                        $43
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col" style="text-align: center; margin: 1rem 0;">
+                                    <button type="button" class="btn btn-primary"
+                                        style="background-color: #4077FF; border: 2px solid #4077FF; width: 100%;">PLACE
+                                        AT CURRENT LINE</button>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col" style="text-align: center;">
+                                    <!-- <div class="input-group mb-3">
+                                        <button class="btn btn-primary" type="button" id="button-addon1"
+                                            style="background-color: #4077FF; border-color: #4077FF; width: 50%;">NOTIFY
+                                            AT</button>
+                                        <input type="text" class="form-control" placeholder="" aria-label="Notify"
+                                            aria-describedby="button-addon1"
+                                            style="width: 50%; border: 2px solid #4077FF;">
+                                    </div> -->
+                                    <button class="btn btn-primary" type="button" id="button-addon1"
+                                        style="background-color: #4077FF; border: 2px solid #4077FF; width: 100%; padding: .375rem .25rem; margin-bottom: 1rem;">NOTIFY
+                                        AT</button>
+                                </div>
+                                <div class="col">
+                                    <input type="text" class="form-control" placeholder="" aria-label="Notify"
+                                        aria-describedby="button-addon1"
+                                        style="width: 100%; border: 2px solid #4077FF;">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col" style="text-align: center;">
+                                    <button type="button" class="btn btn-primary"
+                                        style="background-color: #2A324B; border: 2px solid #2A324B; width: 100%;">BET
+                                        NOW
+                                        AT PINNACLE</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container" style="font-size: .75rem; margin-bottom: 75px;">
+        <div class="row">
+            <div class="col" style="background-color: white; box-shadow: 5px 5px 10px #C7CCDB; margin-bottom: 25px;">
+                <div class="container" style="padding: 0;">
+                    <div class="row">
+                        <div class="col" style="text-align: right; font-size: 1rem; color: #C7CCDB;">
+                            <i class="fas fa-star"></i>
+                            <!-- <i class="far fa-star"></i> -->
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col" style="padding: 0 .25rem 1.5rem .25rem;">
+                            <div style="color: #9FA4B6;">
+                                7:00pm
+                            </div>
+                            <div style="padding: 7px 0; margin-bottom: 5px;">
+                                <i class="fas fa-football-ball"></i> ATL <span style="color: #4077FF;">21</span>
+                            </div>
+                            <div style="padding: 7px 0;">
+                                <i class="fas fa-football-ball"></i> PHI <span style="color: #4077FF;">28</span>
+                            </div>
+                            <!-- <div style="padding: 0; color: #9FA4B6;">
+                                <i class="fas fa-star"></i> Favorite
+                            </div> -->
+                        </div>
+                        <div class="col" style="padding: 0 .25rem 1.5rem .25rem;">
+                            <div style="color: #9FA4B6;">
+                                Spread
+                            </div>
+                            <div
+                                style="background-color: #4077FF; border: 2px solid #4077FF; color: white; text-align: center; padding: 5px 0; border-radius: 5px 5px 0 0; margin-bottom: 5px;">
+                                +2-110
+                            </div>
+                            <div
+                                style="color: #4077FF; text-align: center; padding: 5px 0; border-radius: 0 0 5px 5px; border: 2px solid #4077FF;">
+                                -2-110
+                            </div>
+                        </div>
+                        <div class="col" style="padding: 0 .25rem 1.5rem .25rem;">
+                            <div style="color: #9FA4B6;">
+                                Moneyline
+                            </div>
+                            <div
+                                style="background-color: #4077FF; border: 2px solid #4077FF; color: white; text-align: center; padding: 5px 0; border-radius: 5px 5px 0 0; margin-bottom: 5px;">
+                                +150
+                            </div>
+                            <div
+                                style="color: #4077FF; text-align: center; padding: 5px 0; border-radius: 0 0 5px 5px; border: 2px solid #4077FF;">
+                                -130
+                            </div>
+                        </div>
+                        <div class="col" style="padding: 0 .25rem 1.5rem .25rem;">
+                            <div style="color: #9FA4B6;">
+                                Totals
+                            </div>
+                            <div
+                                style="background-color: #4077FF; border: 2px solid #4077FF; color: white; text-align: center; padding: 5px 0; border-radius: 5px 5px 0 0; margin-bottom: 5px;">
+                                O230-110
+                            </div>
+                            <div
+                                style="color: #4077FF; text-align: center; padding: 5px 0; border-radius: 0 0 5px 5px; border: 2px solid #4077FF;">
+                                U230-110
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col" style="background-color: white; box-shadow: 5px 5px 10px #C7CCDB; margin-bottom: 25px;">
+                <div class="container" style="padding: 0;">
+                    <div class="row">
+                        <div class="col" style="text-align: right; font-size: 1rem; color: #FFD23F;">
+                            <i class="fas fa-star"></i>
+                            <!-- <i class="far fa-star"></i> -->
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col" style="padding: 0 .25rem 1.5rem .25rem;">
+                            <div style="color: #9FA4B6;">
+                                7:00pm
+                            </div>
+                            <div style="padding: 7px 0; margin-bottom: 5px;">
+                                <i class="fas fa-football-ball"></i> ATL <span style="color: #4077FF;">21</span>
+                            </div>
+                            <div style="padding: 7px 0;">
+                                <i class="fas fa-football-ball"></i> PHI <span style="color: #4077FF;">28</span>
+                            </div>
+                            <!-- <div style="padding: 0; color: #9FA4B6;">
+                                <i class="fas fa-star"></i> Favorite
+                            </div> -->
+                        </div>
+                        <div class="col" style="padding: 0 .25rem 1.5rem .25rem;">
+                            <div style="color: #9FA4B6;">
+                                Spread
+                            </div>
+                            <div
+                                style="background-color: #4077FF; border: 2px solid #4077FF; color: white; text-align: center; padding: 5px 0; border-radius: 5px 5px 0 0; margin-bottom: 5px;">
+                                +2-110
+                            </div>
+                            <div
+                                style="color: #4077FF; text-align: center; padding: 5px 0; border-radius: 0 0 5px 5px; border: 2px solid #4077FF;">
+                                -2-110
+                            </div>
+                        </div>
+                        <div class="col" style="padding: 0 .25rem 1.5rem .25rem;">
+                            <div style="color: #9FA4B6;">
+                                Moneyline
+                            </div>
+                            <div
+                                style="background-color: #4077FF; border: 2px solid #4077FF; color: white; text-align: center; padding: 5px 0; border-radius: 5px 5px 0 0; margin-bottom: 5px;">
+                                +150
+                            </div>
+                            <div
+                                style="color: #4077FF; text-align: center; padding: 5px 0; border-radius: 0 0 5px 5px; border: 2px solid #4077FF;">
+                                -130
+                            </div>
+                        </div>
+                        <div class="col" style="padding: 0 .25rem 1.5rem .25rem;">
+                            <div style="color: #9FA4B6;">
+                                Totals
+                            </div>
+                            <div
+                                style="background-color: #4077FF; border: 2px solid #4077FF; color: white; text-align: center; padding: 5px 0; border-radius: 5px 5px 0 0; margin-bottom: 5px;">
+                                O230-110
+                            </div>
+                            <div
+                                style="color: #4077FF; text-align: center; padding: 5px 0; border-radius: 0 0 5px 5px; border: 2px solid #4077FF;">
+                                U230-110
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col" style="background-color: white; box-shadow: 5px 5px 10px #C7CCDB; margin-bottom: 25px;">
+                <div class="container" style="padding: 0;">
+                    <div class="row">
+                        <div class="col" style="text-align: right; font-size: 1rem; color: #C7CCDB;">
+                            <i class="fas fa-star"></i>
+                            <!-- <i class="far fa-star"></i> -->
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col" style="padding: 0 .25rem 1.5rem .25rem;">
+                            <div style="color: #9FA4B6;">
+                                7:00pm
+                            </div>
+                            <div style="padding: 7px 0; margin-bottom: 5px;">
+                                <i class="fas fa-football-ball"></i> ATL <span style="color: #4077FF;">21</span>
+                            </div>
+                            <div style="padding: 7px 0;">
+                                <i class="fas fa-football-ball"></i> PHI <span style="color: #4077FF;">28</span>
+                            </div>
+                            <!-- <div style="padding: 0; color: #9FA4B6;">
+                                <i class="fas fa-star"></i> Favorite
+                            </div> -->
+                        </div>
+                        <div class="col" style="padding: 0 .25rem 1.5rem .25rem;">
+                            <div style="color: #9FA4B6;">
+                                Spread
+                            </div>
+                            <div
+                                style="background-color: #4077FF; border: 2px solid #4077FF; color: white; text-align: center; padding: 5px 0; border-radius: 5px 5px 0 0; margin-bottom: 5px;">
+                                +2-110
+                            </div>
+                            <div
+                                style="color: #4077FF; text-align: center; padding: 5px 0; border-radius: 0 0 5px 5px; border: 2px solid #4077FF;">
+                                -2-110
+                            </div>
+                        </div>
+                        <div class="col" style="padding: 0 .25rem 1.5rem .25rem;">
+                            <div style="color: #9FA4B6;">
+                                Moneyline
+                            </div>
+                            <div
+                                style="background-color: #4077FF; border: 2px solid #4077FF; color: white; text-align: center; padding: 5px 0; border-radius: 5px 5px 0 0; margin-bottom: 5px;">
+                                +150
+                            </div>
+                            <div
+                                style="color: #4077FF; text-align: center; padding: 5px 0; border-radius: 0 0 5px 5px; border: 2px solid #4077FF;">
+                                -130
+                            </div>
+                        </div>
+                        <div class="col" style="padding: 0 .25rem 1.5rem .25rem;">
+                            <div style="color: #9FA4B6;">
+                                Totals
+                            </div>
+                            <div
+                                style="background-color: #4077FF; border: 2px solid #4077FF; color: white; text-align: center; padding: 5px 0; border-radius: 5px 5px 0 0; margin-bottom: 5px;">
+                                O230-110
+                            </div>
+                            <div
+                                style="color: #4077FF; text-align: center; padding: 5px 0; border-radius: 0 0 5px 5px; border: 2px solid #4077FF;">
+                                U230-110
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer
+        style="position: fixed; width: 100%; left: 0; bottom: 0; background-color: #767B91; text-align: center; padding: 1rem 0 .75rem 0;">
+        <div class="container" style="height: 100%;">
+            <div class="row" style="height: 100%;">
+                <div class="col" style="border-right: 1px solid #9FA4B6; width: 25%; padding: 0;">
+                    <!-- <i class="fas fa-home" style="font-size: 1.5rem; color: white;"></i> -->
+                    <div class="btn-group dropup">
+                        <div type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown"
+                            aria-expanded="false"
+                            style="background-color: transparent; font-size: .75rem; padding: 0; border: none;">
+                            <i class="fas fa-home"
+                                style="font-size: 1.5rem; color: white; display: block; margin-bottom: 4px;"></i>
+                            NFL
+                        </div>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Soccer</a></li>
+                            <li><a class="dropdown-item" href="#">Basketball</a></li>
+                            <li><a class="dropdown-item" href="#">Hockey</a></li>
+                            <li><a class="dropdown-item" href="#">Golf</a></li>
+                            <li><a class="dropdown-item" href="#">Combat Sports</a></li>
+                            <li><a class="dropdown-item" href="#">Baseball</a></li>
+                            <li><a class="dropdown-item" href="#">E-Sports</a></li>
+                        </ul>
+                    </div>
+                    <!-- <div style="color: white; font-size: .75rem;">HOME</div> -->
+                </div>
+                <div class="col" style="border-right: 1px solid #9FA4B6; width: 25%; padding: 0;">
+                    <i class="fas fa-newspaper" style="font-size: 1.5rem; color: #9FA4B6;"></i>
+                    <div style="color: #9FA4B6; font-size: .75rem;">NEWS</div>
+                </div>
+                <div class="col" style="border-right: 1px solid #9FA4B6; width: 25%; padding: 0;">
+                    <i class="fas fa-chart-area" style="font-size: 1.5rem; color: #9FA4B6;"></i>
+                    <div style="color: #9FA4B6; font-size: .75rem;">TRACKER</div>
+                </div>
+                <div class="col" style="width: 25%; padding: 0;">
+                    <i class="fas fa-user" style="font-size: 1.5rem; color: #9FA4B6;"></i>
+                    <div style="color: #9FA4B6; font-size: .75rem;">ACCOUNT</div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
