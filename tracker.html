@@ -18,7 +18,7 @@
     <style>
         body {
             font-family: "Roboto", sans-serif;
-            background-color: #E1E5EE;
+            background-color: #F2F4F8;
         }
 
         .dropdown-item:active {
@@ -69,6 +69,22 @@
         .loss {
             color: #B3001B;
         }
+
+        .nav-tabs {
+            border: none;
+        }
+
+        .nav-tabs .nav-link {
+            border: none;
+        }
+
+        .nav-tabs .nav-link.active {
+            color: #40a0db;
+        }
+
+        /* #SvgjsG1051 {
+            display: none;
+        } */
     </style>
 </head>
 
@@ -95,10 +111,10 @@
 
     <ul class="nav nav-tabs justify-content-center" style="margin-top: 1rem;">
         <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#" style="color: #4077FF; font-size: 14px;">Stats</a>
+            <a class="nav-link" aria-current="page" href="#" style="color: #767B91; font-size: 14px;">Stats</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="#" style="color: #767B91; font-size: 14px;">Chart</a>
+            <a class="nav-link active" href="#" style="color: #4077FF; font-size: 14px;">Chart</a>
         </li>
     </ul>
 
@@ -128,7 +144,7 @@
             </div>
         </div>
 
-        <!-- <div class="container">
+        <div class="container">
             <div class="row">
                 <div class="col" style="text-align: center; padding-top: .5rem;">
                     <h1 style="font-size: 1rem; margin: 0;">Profit/Loss</h1>
@@ -139,9 +155,9 @@
                     <div id="chart"></div>
                 </div>
             </div>
-        </div> -->
+        </div>
 
-        <div class="scrolling-wrapper">
+        <!-- <div class="scrolling-wrapper">
             <div class="data-card">
                 <ul class="list-group">
                     <li class="list-group-item data-title">Event</li>
@@ -226,10 +242,10 @@
                     <li class="list-group-item loss">$0</li>
                 </ul>
             </div>
-        </div>
+        </div> -->
     </div>
 
-    <!-- <div class="container" style="text-align: center; margin-top: 1rem; margin-bottom: 100px; color: #4077FF;">
+    <div class="container" style="text-align: center; margin-top: 1rem; margin-bottom: 75px; color: #4077FF;">
         <div class="row" style="margin-top: .5rem;">
             <div class="col">
                 <button type="button" class="btn btn-primary"
@@ -302,20 +318,20 @@
                 7.0%
             </div>
         </div>
-    </div> -->
+    </div>
 
     <footer
-        style="position: fixed; width: 100%; left: 0; bottom: 0; background-color: #767B91; text-align: center; padding: 1rem 0 .75rem 0;">
+        style="position: fixed; width: 100%; left: 0; bottom: 0; background-color: #2A324B; text-align: center; padding: .75rem 0 .5rem 0;">
         <div class="container" style="height: 100%;">
             <div class="row" style="height: 100%;">
-                <div class="col" style="border-right: 1px solid #9FA4B6; width: 25%; padding: 0;">
+                <div class="col" style="border-right: 1px solid #767B91; width: 25%; padding: 0;">
                     <!-- <i class="fas fa-home" style="font-size: 1.5rem; color: white;"></i> -->
                     <div class="btn-group dropup">
                         <div type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown"
                             aria-expanded="false"
-                            style="background-color: transparent; font-size: .75rem; padding: 0; border: none; color: #9FA4B6;">
+                            style="background-color: transparent; font-size: .75rem; padding: 0; border: none;">
                             <i class="fas fa-home"
-                                style="font-size: 1.5rem; color: #9FA4B6; display: block; margin-bottom: 4px;"></i>
+                                style="font-size: 1.5rem; color: white; display: block; margin-bottom: 4px;"></i>
                             NFL
                         </div>
                         <ul class="dropdown-menu">
@@ -330,17 +346,17 @@
                     </div>
                     <!-- <div style="color: white; font-size: .75rem;">HOME</div> -->
                 </div>
-                <div class="col" style="border-right: 1px solid #9FA4B6; width: 25%; padding: 0;">
-                    <i class="fas fa-newspaper" style="font-size: 1.5rem; color: #9FA4B6;"></i>
-                    <div style="color: #9FA4B6; font-size: .75rem;">NEWS</div>
+                <div class="col" style="border-right: 1px solid #767B91; width: 25%; padding: 0;">
+                    <i class="fas fa-newspaper" style="font-size: 1.5rem; color: #767B91;"></i>
+                    <div style="color: #767B91; font-size: .75rem;">NEWS</div>
                 </div>
-                <div class="col" style="border-right: 1px solid #9FA4B6; width: 25%; padding: 0;">
+                <div class="col" style="border-right: 1px solid #767B91; width: 25%; padding: 0;">
                     <i class="fas fa-chart-area" style="font-size: 1.5rem; color: white;"></i>
                     <div style="color: white; font-size: .75rem;">TRACKER</div>
                 </div>
                 <div class="col" style="width: 25%; padding: 0;">
-                    <i class="fas fa-user" style="font-size: 1.5rem; color: #9FA4B6;"></i>
-                    <div style="color: #9FA4B6; font-size: .75rem;">ACCOUNT</div>
+                    <i class="fas fa-user" style="font-size: 1.5rem; color: #767B91;"></i>
+                    <div style="color: #767B91; font-size: .75rem;">ACCOUNT</div>
                 </div>
             </div>
         </div>
